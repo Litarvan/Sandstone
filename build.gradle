@@ -1,3 +1,12 @@
+println "\n-----------------------------------------------------\n"
+
+println "-- Sandstone version " + version + " by TheShark34 --"
+println "  - Brining forge-like ASM to Bukkit\n"
+
+println "Thanks for using Sandstone !\n"
+
+println "-----------------------------------------------------\n"
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -13,29 +22,35 @@ compileJava.options.encoding = 'UTF-8'
 
 project.buildDir = 'target'
 
-println "\n-----------------------------------------------------\n"
+jar {
+	manifest {
+		attributes 'Main-Class': 'fr.theshark34.sandstone.relauncher.ServerLauncher'
+	}
+}
 
-println "-- Sandstone version " + version + " by TheShark34 --"
-println "  - Brining forge-like ASM to Bukkit\n"
+task copyLicense {
+    doLast {
+        copy {
+            from "LICENSE"
+            into "$buildDir"
+        }
 
-println "Thanks for using Sandstone !\n"
-
-println "-----------------------------------------------------\n"
+        copy {
+            from "LICENSE.LESSER"
+            into "$buildDir"
+        }
+    }
+}
 
 task help {
 	doLast {
-		println "To build Sandstone, just do 'gradlew build'.\n"
+		println "\nTo build Sandstone, just do 'gradlew build' in a command-line,"
+		println "the jar will be in target/libs/sandstone-" + version + ".jar.\n"
 
-		println "Use the api jar to create your coreplugins,"
-		println "and the normal jar to use coreplugins with your server.\n"
-
-		println "You will need to launch it instead of the normal server, using :\n"
+		println "You will need to launch the sandstone jar instead of the normal server, using :\n"
 
 		println "     'java -jar sandstone-" + version + ".jar <nameofyourserverjar>\n"
 
 		println "You need at least Java 6 to use Sandstone.\n"
 	}
 }
-
-
-
