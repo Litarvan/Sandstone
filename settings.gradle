@@ -1,0 +1,3 @@
+include 'SandstoneAPI'
+
+rootProject.name = 'sandstone'
