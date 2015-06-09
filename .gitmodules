@@ -1,0 +1,3 @@
+[submodule "SandstoneAPI"]
+	path = SandstoneAPI
+	url = git@github.com:TheShark34/SandstoneAPI.git

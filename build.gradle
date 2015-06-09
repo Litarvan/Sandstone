@@ -13,7 +13,7 @@ compileJava.options.encoding = 'UTF-8'
 
 project.buildDir = 'target'
 
-println "-----------------------------------------------------\n"
+println "\n-----------------------------------------------------\n"
 
 println "-- Sandstone version " + version + " by TheShark34 --"
 println "  - Brining forge-like ASM to Bukkit\n"
@@ -23,16 +23,18 @@ println "Thanks for using Sandstone !\n"
 println "-----------------------------------------------------\n"
 
 task help {
-	println "To build Sandstone, just do 'gradlew build'.\n"
+	doLast {
+		println "To build Sandstone, just do 'gradlew build'.\n"
 
-	println "Use the api jar to create your coreplugins,"
-	println "and the normal jar to use coreplugins with your server.\n"
+		println "Use the api jar to create your coreplugins,"
+		println "and the normal jar to use coreplugins with your server.\n"
 
-	println "You will need to launch it instead of the normal server, using :\n"
+		println "You will need to launch it instead of the normal server, using :\n"
 
-	println "     'java -jar sandstone-" + version + ".jar <nameofyourserverjar>\n"
+		println "     'java -jar sandstone-" + version + ".jar <nameofyourserverjar>\n"
 
-	println "You need at least Java 6 to use Sandstone.\n"
+		println "You need at least Java 6 to use Sandstone.\n"
+	}
 }
 
 
