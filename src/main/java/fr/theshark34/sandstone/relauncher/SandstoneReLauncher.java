@@ -45,7 +45,7 @@ public class SandstoneReLauncher {
      *            The given bukkit/spigot/etc... jar to use
      */
     public SandstoneReLauncher(File jar) {
-
+        this.jar = jar;
     }
 
     /**

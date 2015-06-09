@@ -54,28 +54,24 @@ public class Main {
         // Else if there is one argument
         else
             // Starting
-            start(args[1]);
+            start(args[0]);
 	}
 
     /**
      * Print a beautiful welcome message :3
      */
     public static void printWelcomeMessage() {
-        System.out.println("\n-----------------------------------------------------\n");
-
         System.out.println("-- Sandstone version " + VERSION + " by TheShark34 --");
         System.out.println("  - Brining forge-like ASM to Bukkit\n");
-
-        System.out.println("Thanks for using Sandstone !\n");
-
-        System.out.println("-----------------------------------------------------\n");
     }
 
     /**
      * Print the help
      */
     public static void printHelp() {
-
+        System.err.println("ERR: You need to provide one argument, the jar file you want to use (your bukkit/spigot/etc... jar)");
+        System.err.println("Like this : java -jar sandstone-" + VERSION + ".jar <yourjar>");
+        System.err.println("<yourjar> can be something like spigot-1.8.3-SNAPSHOT-R0.1.jar");
     }
 
     /**
