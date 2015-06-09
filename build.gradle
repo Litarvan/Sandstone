@@ -24,7 +24,7 @@ project.buildDir = 'target'
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'fr.theshark34.sandstone.relauncher.ServerLauncher'
+		attributes 'Main-Class': 'fr.theshark34.sandstone.relauncher.Main'
 	}
 }
 
